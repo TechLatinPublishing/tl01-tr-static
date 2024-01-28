@@ -1,0 +1,27 @@
+{{ if .Site.Params.vyDiagnostic }}
+
+<div class="well">
+  <title>{{ .Params.title }} | {{ .Site.Title }}</title>
+  <br />
+  <h1>vyDiagnostics here - from MODs</h1>
+
+  <br />
+  {{/* {{ printf "%#v" $.title}} */}}
+  <br />
+  {{/* {{ printf "xxTitle: %#v" .Site.Title }} */}}
+
+  <p>title: {{ .Site.Title }}</p>
+  <br />
+  {{/*
+  <p>environment: {{ .Params.Environment }}</p>
+  */}} {{/*
+  <p>Environment 2: {{.Param "Environment"}}</p>
+  */}}
+  <p>Environment: {{.Param "environment"}}</p>
+  <br />
+
+  <br />
+  <p>Type: {{ .Type}}</p>
+</div>
+
+{{ end }}
