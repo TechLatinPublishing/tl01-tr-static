@@ -1,5 +1,5 @@
-{{/* {{ if eq .Site.Params.vyDiagnostic true}} */}} {{ if eq
-.Site.Params.Environment "default" }}
+{{- if .Site.Params.vyDiagnostic -}} {{/* {{ if eq .Site.Params.Environment
+"default" }} */}}
 
 <div class="well">
   <h1>vyDiagnostics here - xxxzzzxx</h1>
@@ -7,6 +7,7 @@
   {{/* {{ printf "%#v" $.title}} */}} {{/* {{ printf "xxTitle: %#v" .Site.Title
   }} */}}
   <p>title: {{ .Site.Title }}</p>
+  <p>vyDiagnostic: {{ $Site.Params.vyDiagnostic }}</p>
   {{/*
   <p>environment: {{ .Params.Environment }}</p>
   */}} {{/*
